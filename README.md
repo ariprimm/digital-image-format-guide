@@ -7,13 +7,17 @@
 Built for the *Pengantar Multimedia* practicum at Institut Teknologi PLN.
 
 [![Status](https://img.shields.io/badge/status-completed-2E7D32?style=for-the-badge)](#)
+[![Live Demo](https://img.shields.io/badge/live%20demo-online-C8102E?style=for-the-badge&logo=githubpages&logoColor=white)](https://ariprimm.github.io/digital-image-format-guide/)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](#)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](#)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](#)
 [![Accessible](https://img.shields.io/badge/a11y-WCAG--aware-8A2BE2?style=for-the-badge)](#)
 [![License](https://img.shields.io/badge/license-Educational-lightgrey?style=for-the-badge)](#-license)
 
+**🔗 [ariprimm.github.io/digital-image-format-guide](https://ariprimm.github.io/digital-image-format-guide/)**
+
 [Overview](#-overview) •
+[Preview](#-preview) •
 [Features](#-features) •
 [Format Deep Dive](#-format-deep-dive) •
 [Architecture](#-architecture--how-it-works) •
@@ -37,6 +41,43 @@ The site is a magazine-style editorial layout — not a slide deck — built wit
 | `png.html` | **PNG** — Portable Network Graphics | Raster · Lossless | 03/1996 |
 | `jpg.html` | **JPG** — Joint Photographic Experts Group | Raster · Lossy | 09/1992 |
 | `svg.html` | **SVG** — Scalable Vector Graphics | Vector · XML-based | 09/2001 |
+
+---
+
+## 📸 Preview
+
+<table>
+<tr>
+<td width="50%">
+
+**🏠 Home — format comparison grid**
+<img src="docs/screenshots/index.png" alt="Halaman utama menampilkan tiga kartu spesimen format PNG, JPG, dan SVG" width="100%">
+
+</td>
+<td width="50%">
+
+**🟢 PNG — spec sheet + revealed sample**
+<img src="docs/screenshots/png.png" alt="Halaman detail PNG dengan spesifikasi teknis dan gambar contoh yang sudah ditampilkan" width="100%">
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+**🔵 JPG — spec sheet + revealed sample**
+<img src="docs/screenshots/jpg.png" alt="Halaman detail JPG dengan spesifikasi teknis dan gambar contoh yang sudah ditampilkan" width="100%">
+
+</td>
+<td width="50%">
+
+**🟣 SVG — spec sheet + revealed sample**
+<img src="docs/screenshots/svg.png" alt="Halaman detail SVG dengan spesifikasi teknis dan gambar contoh yang sudah ditampilkan" width="100%">
+
+</td>
+</tr>
+</table>
+
+> Screenshots captured directly from the live GitHub Pages deployment. The format pages are shown with the sample image revealed (post-toggle state) to demonstrate the interaction described below.
 
 ---
 
@@ -150,10 +191,31 @@ python3 -m http.server 8000
 # then visit http://localhost:8000
 ```
 
-### 🌐 Deploying to GitHub Pages
-1. Go to **Settings → Pages** in this repository.
-2. Under **Source**, select the `main` branch and `/ (root)` folder.
-3. Save — GitHub will publish the site at `https://ariprimm.github.io/digital-image-format-guide/`.
+### 🌐 Live on GitHub Pages
+
+This project is deployed and live:
+
+**➡️ [https://ariprimm.github.io/digital-image-format-guide/](https://ariprimm.github.io/digital-image-format-guide/)**
+
+It's served straight from the `main` branch root — there's no build step, so whatever is pushed to `main` is exactly what's live. Deployment config:
+
+| Setting | Value |
+|---|---|
+| Source | Deploy from a branch |
+| Branch | `main` / `(root)` |
+| Build step | None (static files served as-is) |
+
+**Updating the live site** — since there's no build pipeline, publishing a change is just:
+
+```bash
+git add .
+git commit -m "Update: describe your change"
+git push origin main
+```
+
+GitHub Pages automatically rebuilds and redeploys within roughly a minute of the push landing on `main`. You can watch the rollout under the repository's **Actions** tab (each push triggers a `pages build and deployment` workflow run), or check **Settings → Pages**, which always shows the timestamp of the most recent successful deployment.
+
+**Deploying your own fork to a different host** — since the site has zero build dependencies, the same steps work identically on Netlify, Vercel, or Cloudflare Pages: point the host at this repository with an empty build command and `/` as the publish directory.
 
 ---
 
