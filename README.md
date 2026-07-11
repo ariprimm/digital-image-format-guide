@@ -95,12 +95,15 @@ The site is a magazine-style editorial layout — not a slide deck — built wit
 ## 🔬 Format Deep Dive
 
 ### 🟢 PNG — Portable Network Graphics
+
 Lossless compression via **DEFLATE** (LZ77 dictionary matching + Huffman coding) — every pixel survives the round trip intact. Supports a full 8-bit alpha channel for genuine transparency. The lossless guarantee is exactly why PNG owns sharp-edge content: logos, icons, UI screenshots, flat-color illustrations. The trade-off is file size on photographic, gradient-heavy content, where lossless encoding can't compete with lossy compression.
 
 ### 🔵 JPG — Joint Photographic Experts Group
+
 Lossy compression built on the **Discrete Cosine Transform (DCT)**: pixel blocks are converted into the frequency domain, then high-frequency components — the ones human vision is least sensitive to — are rounded off during quantization. This is *intentional, irreversible* data loss, which is precisely why JPG excels at photographs and complex gradients but degrades sharp edges and text into visible block artifacts, especially under repeated re-saves (generation loss). No alpha channel.
 
 ### 🟣 SVG — Scalable Vector Graphics
+
 Not pixels at all — an XML document describing geometry: paths, Bézier curves, circles, polygons, anchor coordinates, and fill/stroke attributes. Because it's math rather than a pixel grid, SVG is resolution-independent by definition: one file scales from a 16px favicon to a building-sized banner without blur. Being DOM-based, it's also the only one of the three that's natively stylable and animatable via CSS or JavaScript.
 
 <details>
@@ -119,9 +122,9 @@ Not pixels at all — an XML document describing geometry: paths, Bézier curves
 
 ---
 
-## 🏗️ Architecture & How It Works
+## 🏗 Architecture & How It Works
 
-```
+```text
 User clicks "Tampilkan Gambar"
         │
         ▼
@@ -144,24 +147,31 @@ Every page shares one `css/style.css` and one `js/script.js`, so the whole site'
 
 ## 📂 Project Structure
 
-```
+```text
 digital-image-format-guide/
 │
 ├── css/
-│   └── style.css          # Design tokens, layout, responsive rules
+│   └── style.css     # Design tokens, layout, responsive rules
+│
+├── docs/
+│   └── screenshots/  # README preview images
+│       ├── index.png
+│       ├── png.png
+│       ├── jpg.png
+│       └── svg.png
 │
 ├── images/
-│   ├── sample.png          # RGBA, transparent badge illustration
-│   ├── sample.jpg          # RGB photo-style gradient sample
-│   └── sample.svg          # Vector logo sample
+│   ├── sample.png    # RGBA, transparent badge illustration
+│   ├── sample.jpg    # RGB photo-style gradient sample
+│   └── sample.svg    # Vector logo sample
 │
 ├── js/
-│   └── script.js           # Reveal/hide toggle + active-nav detection
+│   └── script.js     # Reveal/hide toggle + active-nav detection
 │
-├── index.html               # Home — format comparison grid
-├── png.html                  # PNG specimen page
-├── jpg.html                   # JPG specimen page
-├── svg.html                    # SVG specimen page
+├── index.html        # Home — format comparison grid
+├── png.html          # PNG specimen page
+├── jpg.html          # JPG specimen page
+├── svg.html          # SVG specimen page
 └── README.md
 ```
 
@@ -234,6 +244,7 @@ Accessibility wasn't bolted on afterward — it's built into the markup:
 ## 🎯 Learning Objectives
 
 Working through this project reinforces:
+
 - The structural difference between **raster** (pixel-grid) and **vector** (geometry-described) image data
 - Why **lossy** and **lossless** compression exist as a deliberate trade-off, not a quality hierarchy
 - How **DCT-based** compression (JPG) and **dictionary-based** compression (PNG's DEFLATE) actually work under the hood
