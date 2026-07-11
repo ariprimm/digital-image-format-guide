@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Format SVG — Anatomi Gambar Digital</title>
+<meta name="description" content="Penjelasan format SVG: struktur XML berbasis vektor, skalabilitas, dan contoh gambar interaktif.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#konten-utama">Lewati ke konten utama</a>
+
+<header class="masthead">
+  <div class="masthead-top">
+    <a href="index.html" class="brand" aria-label="Format Studi, kembali ke beranda">Format<span class="brand-dot">/</span>Studi</a>
+    <span class="masthead-eyebrow">Praktikum Pengantar Multimedia</span>
+  </div>
+  <nav class="navbar" aria-label="Navigasi utama">
+    <a href="index.html">Home</a>
+    <a href="png.html">Halaman PNG</a>
+    <a href="jpg.html">Halaman JPG</a>
+    <a href="svg.html" aria-current="page">Halaman SVG</a>
+  </nav>
+</header>
+
+<main class="wrap" id="konten-utama">
+
+  <section class="page-hero" aria-labelledby="svg-title">
+    <span class="format-tag">VEKTOR &middot; XML BASED &middot; 09/2001</span>
+    <h1 id="svg-title">SVG &mdash; Scalable Vector Graphics</h1>
+    <p class="full-name">Disusun dari Path &amp; Bezier Curve &middot; Resolution Independent</p>
+  </section>
+
+  <article class="spec-sheet">
+    <div class="spec-text">
+      <p>
+        Berbeda dari PNG dan JPG yang menyimpan gambar sebagai kumpulan piksel, SVG menyimpan
+        gambar dalam bentuk markup XML yang mendeskripsikan bentuk geometris secara matematis,
+        mulai dari garis, kurva Bezier, lingkaran, hingga poligon, lengkap dengan koordinat titik
+        jangkar dan atribut warna. Karena itu, SVG bersifat resolution independent dan dapat
+        diperbesar atau diperkecil pada skala berapa pun tanpa mengalami pecah atau blur.
+      </p>
+      <p>
+        Sifat inilah yang membuat SVG menjadi pilihan utama untuk logo dan ikon pada produk
+        digital, karena satu berkas saja sudah cukup digunakan di berbagai ukuran tampilan,
+        mulai dari favicon kecil hingga banner besar. SVG juga dapat diedit langsung melalui
+        CSS maupun JavaScript karena strukturnya berupa elemen DOM, sehingga warna atau bentuknya
+        dapat diubah secara dinamis tanpa membuka ulang aplikasi desain.
+      </p>
+      <ul class="spec-list">
+        <li><span>Struktur Data</span><span>XML (path, node, atribut)</span></li>
+        <li><span>Skalabilitas</span><span>Tak terbatas, tanpa blur</span></li>
+        <li><span>Kasus Terbaik</span><span>Logo, ikon, ilustrasi flat</span></li>
+        <li><span>Interaktivitas</span><span>Dapat diubah via CSS/JS</span></li>
+      </ul>
+    </div>
+
+    <div class="viewer">
+      <div class="viewer-frame" id="viewerFrame">
+        <p class="viewer-placeholder">Gambar contoh SVG belum ditampilkan.<br>Klik tombol di bawah untuk melihatnya.</p>
+        <img src="images/sample.svg" alt="Contoh gambar format SVG berupa logo vektor geometris berwarna merah">
+      </div>
+      <button type="button" class="toggle-btn" id="toggleImageBtn" aria-pressed="false" aria-controls="viewerFrame">Tampilkan Gambar</button>
+      <p class="viewer-caption">images/sample.svg &middot; vektor, skala bebas</p>
+    </div>
+  </article>
+
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <p class="watermark">Pengantar Multimedia &mdash; <strong>Arif Prima Rahadian_202432107</strong></p>
+    <p class="footer-note">Institut Teknologi PLN &middot; Sistem Informasi</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

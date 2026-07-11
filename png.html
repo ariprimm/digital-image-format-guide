@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Format PNG — Anatomi Gambar Digital</title>
+<meta name="description" content="Penjelasan format PNG: kompresi lossless, transparansi, dan contoh gambar interaktif.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#konten-utama">Lewati ke konten utama</a>
+
+<header class="masthead">
+  <div class="masthead-top">
+    <a href="index.html" class="brand" aria-label="Format Studi, kembali ke beranda">Format<span class="brand-dot">/</span>Studi</a>
+    <span class="masthead-eyebrow">Praktikum Pengantar Multimedia</span>
+  </div>
+  <nav class="navbar" aria-label="Navigasi utama">
+    <a href="index.html">Home</a>
+    <a href="png.html" aria-current="page">Halaman PNG</a>
+    <a href="jpg.html">Halaman JPG</a>
+    <a href="svg.html">Halaman SVG</a>
+  </nav>
+</header>
+
+<main class="wrap" id="konten-utama">
+
+  <section class="page-hero" aria-labelledby="png-title">
+    <span class="format-tag">RASTER &middot; LOSSLESS &middot; 03/1996</span>
+    <h1 id="png-title">PNG &mdash; Portable Network Graphics</h1>
+    <p class="full-name">Kompresi Deflate (LZ77 + Huffman Coding) &middot; Mendukung Kanal Alpha</p>
+  </section>
+
+  <article class="spec-sheet">
+    <div class="spec-text">
+      <p>
+        PNG merupakan format gambar raster yang menyimpan setiap piksel gambar secara utuh melalui
+        kompresi lossless, artinya tidak ada satu pun detail warna yang dihilangkan selama proses
+        pemadatan berkas. Format ini pertama kali dirilis sebagai alternatif terbuka dari GIF dan
+        kini menjadi standar utama untuk aset yang membutuhkan ketajaman tepi serta transparansi
+        penuh, seperti ikon, logo, tangkapan layar antarmuka, dan ilustrasi flat design.
+      </p>
+      <p>
+        Karena sifatnya yang lossless, PNG sangat ideal digunakan pada gambar dengan garis tajam
+        dan area warna solid, sebab kompresi lossy pada format lain cenderung memunculkan artefak
+        buram di sekitar tepian tersebut. Kelemahan utamanya adalah ukuran berkas yang cenderung
+        lebih besar dibandingkan JPG untuk gambar dengan gradasi warna kompleks seperti foto.
+      </p>
+      <ul class="spec-list">
+        <li><span>Jenis Kompresi</span><span>Lossless (DEFLATE)</span></li>
+        <li><span>Transparansi</span><span>Ya, kanal alpha 8-bit</span></li>
+        <li><span>Kasus Terbaik</span><span>Logo, ikon, teks, screenshot</span></li>
+        <li><span>Degradasi saat Disimpan Ulang</span><span>Tidak ada</span></li>
+      </ul>
+    </div>
+
+    <div class="viewer">
+      <div class="viewer-frame" id="viewerFrame">
+        <p class="viewer-placeholder">Gambar contoh PNG belum ditampilkan.<br>Klik tombol di bawah untuk melihatnya.</p>
+        <img src="images/sample.png" alt="Contoh gambar format PNG berupa lencana lingkaran merah dengan latar belakang transparan">
+      </div>
+      <button type="button" class="toggle-btn" id="toggleImageBtn" aria-pressed="false" aria-controls="viewerFrame">Tampilkan Gambar</button>
+      <p class="viewer-caption">images/sample.png &middot; 600 &times; 600px &middot; RGBA</p>
+    </div>
+  </article>
+
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <p class="watermark">Pengantar Multimedia &mdash; <strong>Arif Prima Rahadian_202432107</strong></p>
+    <p class="footer-note">Institut Teknologi PLN &middot; Sistem Informasi</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

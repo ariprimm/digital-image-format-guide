@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <defs>
+    <linearGradient id="svgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E63946"/>
+      <stop offset="100%" stop-color="#7A1315"/>
+    </linearGradient>
+  </defs>
+  <circle cx="300" cy="300" r="250" fill="url(#svgGrad)" stroke="#1C1414" stroke-width="6"/>
+  <circle cx="300" cy="300" r="180" fill="#FAF6F1"/>
+  <!-- bentuk vektor: path dengan kurva Bezier, mewakili konsep "path & anchor point" -->
+  <path d="M 210 360 C 210 250, 390 250, 390 360 C 390 420, 330 420, 300 380 C 270 420, 210 420, 210 360 Z"
+        fill="none" stroke="#1C1414" stroke-width="10" stroke-linejoin="round"/>
+  <circle cx="210" cy="360" r="8" fill="#C8102E"/>
+  <circle cx="390" cy="360" r="8" fill="#C8102E"/>
+  <circle cx="300" cy="250" r="8" fill="#C8102E"/>
+  <text x="300" y="470" text-anchor="middle" font-family="Georgia, serif" font-size="46" font-weight="700" fill="#1C1414">SVG</text>
+</svg>

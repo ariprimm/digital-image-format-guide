@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Format JPG — Anatomi Gambar Digital</title>
+<meta name="description" content="Penjelasan format JPG: kompresi lossy, transformasi DCT, dan contoh gambar interaktif.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#konten-utama">Lewati ke konten utama</a>
+
+<header class="masthead">
+  <div class="masthead-top">
+    <a href="index.html" class="brand" aria-label="Format Studi, kembali ke beranda">Format<span class="brand-dot">/</span>Studi</a>
+    <span class="masthead-eyebrow">Praktikum Pengantar Multimedia</span>
+  </div>
+  <nav class="navbar" aria-label="Navigasi utama">
+    <a href="index.html">Home</a>
+    <a href="png.html">Halaman PNG</a>
+    <a href="jpg.html" aria-current="page">Halaman JPG</a>
+    <a href="svg.html">Halaman SVG</a>
+  </nav>
+</header>
+
+<main class="wrap" id="konten-utama">
+
+  <section class="page-hero" aria-labelledby="jpg-title">
+    <span class="format-tag">RASTER &middot; LOSSY &middot; 09/1992</span>
+    <h1 id="jpg-title">JPG &mdash; Joint Photographic Experts Group</h1>
+    <p class="full-name">Kompresi berbasis Discrete Cosine Transform (DCT) &middot; Tanpa Transparansi</p>
+  </section>
+
+  <article class="spec-sheet">
+    <div class="spec-text">
+      <p>
+        JPG adalah format gambar raster yang menggunakan kompresi lossy, yaitu metode pemadatan
+        data yang secara sengaja membuang sebagian informasi warna yang dianggap kurang signifikan
+        bagi persepsi visual manusia. Proses ini memanfaatkan transformasi DCT untuk mengubah blok
+        piksel ke domain frekuensi, kemudian membulatkan komponen frekuensi tinggi melalui tahap
+        kuantisasi, sehingga ukuran berkas dapat ditekan jauh lebih kecil dibandingkan PNG.
+      </p>
+      <p>
+        Karena data yang dibuang bersifat permanen, JPG paling cocok digunakan untuk foto atau
+        gambar dengan gradasi warna yang halus dan kompleks, di mana kehilangan detail berfrekuensi
+        tinggi hampir tidak terlihat oleh mata. Sebaliknya, format ini kurang ideal untuk teks,
+        ikon, atau garis tajam karena akan memunculkan artefak blok di sekitar tepiannya, apalagi
+        jika disimpan ulang berkali-kali karena kualitasnya akan terus menurun.
+      </p>
+      <ul class="spec-list">
+        <li><span>Jenis Kompresi</span><span>Lossy (DCT + Kuantisasi)</span></li>
+        <li><span>Transparansi</span><span>Tidak didukung</span></li>
+        <li><span>Kasus Terbaik</span><span>Foto, gambar bergradasi kompleks</span></li>
+        <li><span>Degradasi saat Disimpan Ulang</span><span>Ada (generation loss)</span></li>
+      </ul>
+    </div>
+
+    <div class="viewer">
+      <div class="viewer-frame" id="viewerFrame">
+        <p class="viewer-placeholder">Gambar contoh JPG belum ditampilkan.<br>Klik tombol di bawah untuk melihatnya.</p>
+        <img src="images/sample.jpg" alt="Contoh gambar format JPG dengan gradasi warna kompleks menyerupai foto lanskap matahari terbenam">
+      </div>
+      <button type="button" class="toggle-btn" id="toggleImageBtn" aria-pressed="false" aria-controls="viewerFrame">Tampilkan Gambar</button>
+      <p class="viewer-caption">images/sample.jpg &middot; 600 &times; 600px &middot; RGB, quality 78</p>
+    </div>
+  </article>
+
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <p class="watermark">Pengantar Multimedia &mdash; <strong>Arif Prima Rahadian_202432107</strong></p>
+    <p class="footer-note">Institut Teknologi PLN &middot; Sistem Informasi</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anatomi Gambar Digital — PNG, JPG & SVG</title>
+<meta name="description" content="Artikel edukasi interaktif mengenai perbedaan format gambar PNG, JPG, dan SVG untuk kebutuhan desain grafis pada platform EduTech.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#konten-utama">Lewati ke konten utama</a>
+
+<header class="masthead">
+  <div class="masthead-top">
+    <a href="index.html" class="brand" aria-label="Format Studi, kembali ke beranda">Format<span class="brand-dot">/</span>Studi</a>
+    <span class="masthead-eyebrow">Praktikum Pengantar Multimedia</span>
+  </div>
+  <nav class="navbar" aria-label="Navigasi utama">
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="png.html">Halaman PNG</a>
+    <a href="jpg.html">Halaman JPG</a>
+    <a href="svg.html">Halaman SVG</a>
+  </nav>
+</header>
+
+<main class="wrap" id="konten-utama">
+
+  <section class="hero" aria-labelledby="hero-title">
+    <p class="hero-eyebrow">Artikel Edukasi &mdash; Format Gambar Digital</p>
+    <h1 id="hero-title">Anatomi <em>Gambar</em> Digital</h1>
+    <p class="lede">
+      Setiap gambar yang tampil di layar sebenarnya menyimpan datanya dengan cara yang sangat berbeda.
+      Sebagian tersusun dari jutaan titik warna, sebagian lain hanya berupa rumus dan koordinat.
+      Halaman ini membedah tiga format yang paling sering ditemui dalam pekerjaan desain grafis
+      sehari-hari, yaitu PNG, JPG, dan SVG, lengkap dengan contoh visual yang dapat kamu tampilkan
+      sendiri di setiap halamannya.
+    </p>
+    <div class="ruler" role="presentation">
+      <div class="ruler-tick">RASTER</div>
+      <div class="ruler-tick mid">PIKSEL vs VEKTOR</div>
+      <div class="ruler-tick">VEKTOR</div>
+    </div>
+  </section>
+
+  <section aria-labelledby="specimen-title">
+    <h2 class="section-title" id="specimen-title">Tiga Spesimen Format</h2>
+    <p class="section-sub">Klik salah satu kartu untuk membuka halaman detail lengkap dengan penjelasan singkat dan gambar contoh yang bisa ditampilkan atau disembunyikan.</p>
+
+    <div class="card-grid">
+
+      <article class="format-card">
+        <a href="png.html" class="format-card-link">
+          <span class="format-tag">RASTER &middot; LOSSLESS</span>
+          <div class="motif" aria-hidden="true">
+            <div class="motif-grid">
+              <div class="px"></div><div class="px"></div><div class="px"></div><div class="px"></div><div class="px"></div><div class="px"></div><div class="px"></div>
+              <div class="px"></div><div class="px"></div><div class="px"></div><div class="px"></div><div class="px"></div><div class="px"></div><div class="px"></div>
+              <div class="px"></div><div class="px"></div><div class="px"></div><div class="px"></div><div class="px"></div><div class="px"></div><div class="px"></div>
+              <div class="px"></div><div class="px"></div><div class="px"></div><div class="px"></div><div class="px"></div><div class="px"></div><div class="px"></div>
+            </div>
+          </div>
+          <h3>PNG</h3>
+          <p>Portable Network Graphics. Menyimpan setiap piksel secara utuh tanpa kompresi yang menghilangkan data, mendukung transparansi penuh.</p>
+          <span class="go">Buka halaman PNG &rarr;</span>
+        </a>
+      </article>
+
+      <article class="format-card">
+        <a href="jpg.html" class="format-card-link">
+          <span class="format-tag">RASTER &middot; LOSSY</span>
+          <div class="motif" aria-hidden="true">
+            <svg width="120" height="56" viewBox="0 0 120 56">
+              <defs><linearGradient id="jgrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#E63946"/><stop offset="100%" stop-color="#7A1315"/>
+              </linearGradient></defs>
+              <rect width="120" height="56" fill="url(#jgrad)"/>
+            </svg>
+          </div>
+          <h3>JPG</h3>
+          <p>Joint Photographic Experts Group. Mengompresi gambar secara agresif dengan membuang detail yang tidak signifikan bagi mata manusia.</p>
+          <span class="go">Buka halaman JPG &rarr;</span>
+        </a>
+      </article>
+
+      <article class="format-card">
+        <a href="svg.html" class="format-card-link">
+          <span class="format-tag">VEKTOR &middot; SCALABLE</span>
+          <div class="motif motif-vector" aria-hidden="true">
+            <svg width="120" height="56" viewBox="0 0 120 56">
+              <path d="M10 45 C 30 5, 90 5, 110 45" fill="none" stroke="#C8102E" stroke-width="4"/>
+              <circle cx="10" cy="45" r="4" fill="#1C1414"/>
+              <circle cx="60" cy="8" r="4" fill="#1C1414"/>
+              <circle cx="110" cy="45" r="4" fill="#1C1414"/>
+            </svg>
+          </div>
+          <h3>SVG</h3>
+          <p>Scalable Vector Graphics. Menyimpan gambar sebagai instruksi matematis berbasis XML sehingga dapat diperbesar tanpa batas tanpa pecah.</p>
+          <span class="go">Buka halaman SVG &rarr;</span>
+        </a>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <p class="watermark">Pengantar Multimedia &mdash; <strong>Arif Prima Rahadian_202432107</strong></p>
+    <p class="footer-note">Institut Teknologi PLN &middot; Sistem Informasi</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
